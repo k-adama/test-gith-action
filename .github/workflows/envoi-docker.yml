@@ -21,4 +21,4 @@ jobs:
         run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_HUB_USERNAME }}/test-githAction
 
       - name: Docker Push
-        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/express-typescript-docker
+        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/test-githAction
