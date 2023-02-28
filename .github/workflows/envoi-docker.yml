@@ -17,8 +17,5 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-      - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_HUB_USERNAME }}/test-githAction
-
       - name: Docker Push
         run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/test-githAction
